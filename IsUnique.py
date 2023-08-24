@@ -11,13 +11,14 @@ def is_unique_set(s):
     return True
 
 #Method 2: Sort the input string, and check pairs of consecutive characters for matching. If a match is found, no uniqueness. If string parses, Unique Chars.
-#TC: O(nlogn) SC: O(1)
-# def is_unique_sort(s):
-#     s.sort()
-#     for i in range(len(s)-1):
-#         if s[i] == s[i+1]:
-#             return False
-#     return True
+# TC: O(nlogn) SC: O(1)
+def is_unique_sort(s):
+    s = sorted(s)
+    for i in range(len(s)-1):
+        if s[i] == s[i+1]:
+            return False
+    return True
 
 input_string = "Ash"
 print(is_unique_set(input_string))
+print(is_unique_sort(input_string))
