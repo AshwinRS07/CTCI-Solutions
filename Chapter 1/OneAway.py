@@ -1,5 +1,7 @@
 # There are three types of edits that can be performed on strings: insert a character, remove a character, or replace a character. Given two strings, write a function to check if they are one edit (or zero edits) away.
 
+
+# DP: check each of insert, remove, replace characters which are decided by the function calls.
 def one_away(string1: str,string2: str) -> bool:
     if abs(len(string1)-len(string2)) > 1:
         return False
