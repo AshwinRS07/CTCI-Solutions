@@ -9,6 +9,20 @@ class Node:
         self.val = val
         self.next = None
 
+# Helper functions
+def create_list(nums):
+    # for num in nums:
+    if not nums:
+        return None
+    node = Node(nums[0])
+    node.next = create_list(nums[1:])
+    return node
+
+def print_list(node):
+    while node:
+        print(node.val)
+        node = node.next
+
 def remove_dups(node):
     value_set = set()
     prev = node
@@ -34,20 +48,6 @@ def remove_dups_no_set(node):
                 prev = cur
             cur = cur.next
         current_node = current_node.next
-
-# Helper functions
-def create_list(nums):
-    # for num in nums:
-    if not nums:
-        return None
-    node = Node(nums[0])
-    node.next = create_list(nums[1:])
-    return node
-
-def print_list(node):
-    while node:
-        print(node.val)
-        node = node.next
 
 nums = [1,3,3,4,5]
 root = create_list(nums)
