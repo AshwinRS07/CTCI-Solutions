@@ -10,7 +10,8 @@ def is_unique_set(s):
             char_set.add(char)
     return True
 
-#Method 2: Sort the input string, and check pairs of consecutive characters for matching. If a match is found, no uniqueness. If string parses, Unique Chars.
+# Method 2: Sort the input string, and check pairs of consecutive characters for matching. 
+# If a match is found, no uniqueness. If string parses, Unique Chars.
 # TC: O(nlogn) SC: O(1)
 def is_unique_sort(s):
     s = sorted(s)
