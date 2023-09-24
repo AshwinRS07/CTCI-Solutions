@@ -17,5 +17,6 @@ def flip_bit_to_win(num):
         num >>= 1
     return max_len
 
-num = 20
+num = 23
+print(bin(num))
 print(flip_bit_to_win(num))
