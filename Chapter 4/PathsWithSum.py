@@ -4,8 +4,8 @@
 # (traveling only from parent nodes to child nodes).
 from collections import defaultdict
 class Solution:
-    def pathSum(self, root: TreeNode, sum: int) -> int:
-        def preorder(node: TreeNode, curr_sum) -> None:
+    def pathSum(self, root, sum: int) -> int:
+        def preorder(node, curr_sum) -> None:
             nonlocal count
             if not node:
                 return 
